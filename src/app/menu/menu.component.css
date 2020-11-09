@@ -1,0 +1,128 @@
+/* @font-face {
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+  } */
+
+  .thead{
+    background-color: aqua;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  tr{
+    text-align: center;
+  }
+
+  .thead td{
+    padding: 35px;
+  }
+
+  .refresh-button{
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    background-color: #fff;
+    color: #212121;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E0E0E0;
+    border-image: initial;
+  }
+
+  div .products{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  table{
+    margin: auto;
+    width: 50%;
+    border: 2px dashed black;
+  }
+
+  img{
+    cursor: pointer;
+  }
+
+  .img-col img{
+    max-width: 100%;
+    max-height: 100%;
+    height: 15vh;
+    width: 15vh;
+    margin-right: 15px;
+    border-radius: 50%;
+    border: 2.5px solid rgba(0, 0, 0, 0.433);
+  }
+
+  .coins{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .amount{
+    font-size: x-large;
+    font-weight: bolder;
+  }
+
+  body {
+    background: '../../assets/img/pinkbackgound.png';
+  }
+  
+  .title {
+    text-align: center;
+    display: block;
+    font-family: "Brush Script MT";
+    color: #c001cac4;
+    font-size: 80px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  
+  }
+  
+  .spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+  }
+  .path {
+    stroke: rgb(6, 108, 209);
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }

@@ -1,0 +1,64 @@
+<h1 class="title">
+  Pivashnie's Vending Machine
+</h1>
+<!-- <h2 class="h2">
+        Please select your delicious ice cream 
+        </h2>
+
+<h3 class="h3">
+    Please select your coin
+</h3> -->
+<div class="coins">
+  <h4>ENTER COINS AND PICK AN ICE CREAM</h4>
+  <p>ENTERED AMOUNT: <br> <span class="amount">R{{coins}}</span></p>
+
+  <table>
+    <tr>
+      <td>
+        <div (click)="addCoin(0.5)">
+          <img src="../../assets/img/50c.jpg" alt="50c" style="width:110px;height:110px;border-radius: 50%;">
+        </div>
+      </td>
+      <td>
+        <div (click)="addCoin(1)">
+          <img src="../../assets/img/R1.jpg" alt="R1" style="width:110px;height:110px;border-radius: 50%;">
+        </div>
+      </td>
+      <td>
+        <div (click)="addCoin(2)">
+          <img src="../../assets/img/R2.jpg" alt="R2" style="width:110px;height:110px;border-radius: 50%;">
+        </div>
+      </td>
+      <td>
+        <div (click)="addCoin(5)">
+          <img src="../../assets/img/R5.jpg" alt="R5" style="width:110px;height:110px;border-radius: 50%;">
+        </div>
+      </td>
+    </tr>
+  </table>
+  <button (click)="refresh()" class="refresh-button">
+    RETURN
+  </button>
+</div>
+
+
+<div class="products">
+  <svg *ngIf="loading" class="spinner"  viewBox="0 0 50 50">
+    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+  </svg>
+  <table>
+    <tr class="thead">
+      <td></td>
+      <td>PRODUCT NAME</td>
+      <td>PRICE</td>
+      <td>QUANTITY</td>
+    </tr>
+    <tr *ngFor="let product of products">
+      <td (click)="pickProduct(product.id, product.price, product.qty)" class="img-col"><img src={{product.imgurl}}></td>
+      <td>{{product.name}}</td>
+      <td>R{{product.price}}</td>
+      <td>{{product.qty}}</td>
+    </tr>
+  </table>
+</div>
+
