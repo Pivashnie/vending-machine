@@ -47,7 +47,7 @@
       <td>QUANTITY</td>
     </tr>
     <tr *ngFor="let product of products">
-      <td (click)="pickProduct(product.id, product.price, product.qty)" class="img-col"><img src={{'-'+product.imgurl}}></td>
+      <td (click)="pickProduct(product.id, product.price, product.qty)" class="img-col"><img src={{product.imgurl}}></td>
       <td>{{product.name}}</td>
       <td>R{{product.price}}</td>
       <td>{{product.qty}}</td>
